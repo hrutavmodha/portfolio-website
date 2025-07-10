@@ -3,7 +3,7 @@ import type { NavProps } from '../types/navbar'
 export default function NavBar({ navItems }: NavProps) {
     return (
         <div className='overflow-visible'>
-            <nav className='sticky top-0 z-50 shadow-xl bg-blue-900 justify-between mb-5'>
+            <nav className='sticky top-0 z-50 shadow-2xl bg-blue-900 justify-between mb-5'>
                 <div className='flex items-center justify-between p-3'>
                     <h1 className='text-white font-bold text-2xl'>Hrutav Modha</h1>
                     <ul className="flex gap-4">
