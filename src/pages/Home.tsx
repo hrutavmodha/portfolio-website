@@ -12,7 +12,7 @@ export default function Home() {
                     <div className='flex gap-4'>
                         <Button className='hover:bg-gray-700 shadow-lg' onClick={() => navigate('/projects')}>View Projects</Button>
                         <p className='text-lg font-bold mt-1'>OR</p>
-                        <Button variant='outline' className='border border-1-black shadow-lg'>Contact Me</Button>
+                        <Button className='hover:bg-gray-700 shadow-lg' onClick={() => navigate('/contact')}>Contact Me</Button>
                     </div>
                     <div className='mt-10'>
                         <br /><br /><br />
