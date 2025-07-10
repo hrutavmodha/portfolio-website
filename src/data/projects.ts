@@ -3,8 +3,8 @@ export const projects: project[] = [{
     title: "Text Utility App",
     subtitle: "My first MERN full-stack application",
     details: [
-        "Performs live text manipulations: case conversion, whitespace removal, word/character count.",
-        "Built with MongoDB, Express, React, Node.js for a clean responsive UI and REST API.",
+        "Performs live text manipulations: case conversion, whitespace removal, word/character count.", 
+        "Built with MongoDB, Express, React, Node.js for a clean responsive UI and REST API.", 
         "Fully deployed and available online; demonstrates end-to-end MERN proficiency."
     ],
     deployed: true,
@@ -14,25 +14,16 @@ export const projects: project[] = [{
     details: [
         "Product catalog, cart management, and secure checkout flows built on MERN.",
         "Next feature: integrate a data-analytics dashboard to visualize customer behavior and sales trends.",
-        "⚙ WIP: analytics backend using Python & Pandas for real-time insights."
+        "WIP: analytics backend using Python & Pandas for real-time insights."
     ],
     deployed: false,
 }, {
-    title: "Desktop Assistant (Multi-Modal AI)",
+    title: "Desktop Assistant",
     subtitle: "Custom SKLearn-based voice & text assistant",
     details: [
         "Handles voice/text commands, system tasks, and context routing via bespoke ML pipelines.",
         "Modular architecture lets you plug in new command-handlers easily.",
-        "🌐 Cross-platform builds for Windows, Linux, and macOS coming soon."
-    ],
-    deployed: false,
-}, {
-    title: "Data Analysis Tool (WIP)",
-    subtitle: "Visualize & clean CSV data with Pandas",
-    details: [
-        "Upload CSVs, perform cleaning, and generate graphs/reports with Matplotlib.",
-        "Backend done; integrating frontend data-exchange using Flask.",
-        "🔧 Focus: seamless Python→Web data flow and clear visual insights."
+        "Cross-platform builds for Windows, Linux, and macOS coming soon."
     ],
     deployed: false,
 }]

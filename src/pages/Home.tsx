@@ -7,7 +7,18 @@ export default function Home() {
     return (
         <div className='text-xl'>
             <Heading level={1}>Hi, I'm Hrutav Modha</Heading>
-            <div className='flex justify-around'>
+            <div className='flex flex-col md:flex-row justify-around items-center md:items-start gap-8'>
+                <div>
+                    <div className='flex gap-4'>
+                        <Button className='hover:bg-gray-700 shadow-lg' onClick={() => navigate('/projects')}>View Projects</Button>
+                        <p className='text-lg font-bold mt-1'>OR</p>
+                        <Button variant='outline' className='border border-1-black shadow-lg'>Contact Me</Button>
+                    </div>
+                    <div className='mt-10'>
+                        <br /><br /><br />
+                        <img src='../../images/hrutav.jpg' className='w-40 h-40 sm:w-60 sm:h-60 object-cover rounded-full border-2 border-primary shadow-2xl mx-auto md:mx-0' />
+                    </div>
+                </div>
                 <div>
                     <p>I'm  a backend-focused developer who builds logical systems and scalable architectures</p>
                     <Card className='bg-gray-100 backdrop-blur-lg border border-border max-w-md mb-6 shadow-6xl'>
@@ -25,17 +36,6 @@ export default function Home() {
                             </ul>
                         </CardContent>
                     </Card>
-                </div>
-                <div>
-                    <div className='flex gap-4'>
-                        <Button className='hover:bg-gray-700 shadow-lg' onClick={() => navigate('/projects')}>View Projects</Button>
-                        <p className='text-lg font-bold mt-1'>OR</p>
-                        <Button variant='outline' className='border border-1-black shadow-lg'>Contact Me</Button>
-                    </div>
-                    <div className='mt-10'>
-                        <br/><br/><br/>
-                        <img src='../../images/hrutav.jpg' className='w-50 h-50 sm:w-60 sm:h-60 object-cover rounded-full border-2 border-primary shadow-2xl' />
-                    </div>
                 </div>
             </div>
         </div>
