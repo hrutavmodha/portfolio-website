@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd .. && npm run dev",
+    "devServer": "nodemon server.js",
+    "prodServer": "node server.js",
+    "start": "concurrently \"npm run client\" \"npm run devServer\"",
+    "build": "concurrently \"npm run client\" \"npm run prodServer\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
+    "concurrently": "^9.2.0",
     "nodemon": "^3.1.10"
   },
   "dependencies": {
