@@ -15,7 +15,7 @@ export default function ContactMe() {
         if(!name || !mailOrPhone || !sub || !msg)
             alert('Please fill up all the details')
         else {
-            fetch('http://localhost:3000/contact', {
+            fetch(`${import.meta.env.VITE_BACKEND_URL}contact`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
