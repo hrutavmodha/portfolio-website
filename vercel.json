@@ -1,7 +1,8 @@
 {
-    "projects": [],
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/backend/index.js"
-    }]
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/backend/index.js"
+        }
+    ]
 }
