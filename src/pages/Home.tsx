@@ -16,7 +16,7 @@ export default function Home() {
                     </div>
                     <div className='mt-10'>
                         <br /><br /><br />
-                        <img src='../../images/ghpp.jpg' className='w-40 h-40 sm:w-60 sm:h-60 object-cover rounded-full border-2 border-primary shadow-2xl mx-auto md:mx-0' />
+                        <img src='https://raw.githubusercontent.com/hrutavmodha/portfolio-website/main/images/ghpp.jpg' className='w-40 h-40 sm:w-60 sm:h-60 object-cover rounded-full border-2 border-primary shadow-2xl mx-auto md:mx-0' />
                     </div>
                 </div>
                 <div>

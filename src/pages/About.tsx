@@ -8,7 +8,7 @@ export default function About() {
             <Heading level={1}>About Me</Heading>
             <div className='flex flex-col sm:flex-row sm:justify-around items-center gap-6'>
                 <img
-                    src='../../images/ghpp.jpg'
+                    src='https://raw.githubusercontent.com/hrutavmodha/portfolio-website/main/images/ghpp.jpg'
                     className='w-32 h-32 sm:w-48 sm:h-48 object-cover rounded-full border-2 border-primary shadow-2xl flex-shrink-0'
                     alt='MyProfile'
                 />

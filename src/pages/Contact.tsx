@@ -2,17 +2,17 @@ import { Input } from "../components/ui/input"
 import { Button } from "../components/ui/button"
 import { Card, CardContent, CardHeader } from "../components/ui/card"
 import { Textarea } from "../components/ui/textarea"
-import { FaEnvelope, FaPhone, FaGithub, FaRegPaperPlane, FaLinkedin } from "react-icons/fa"
+import { FaPhone, FaGithub, FaRegPaperPlane, FaLinkedin } from "react-icons/fa"
 import Heading from "../components/Headings"
 import { useState } from "react"
 export default function ContactMe() {
     const [name, setName] = useState<string>('')
-    const [mailOrPhone, setMailOrPhone] = useState<string>('')
+    const [mail, setMail] = useState<string>('')
     const [sub, setSub] = useState<string>('')
     const [msg, setMsg] = useState<string>('')
     const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        if (!name || !mailOrPhone || !sub || !msg)
+        if (!name || !mail || !sub || !msg)
             alert('Please fill up all the details')
         else {
             fetch(`${import.meta.env.VITE_BACKEND_URL}/contact`, {
@@ -22,7 +22,7 @@ export default function ContactMe() {
                 },
                 body: JSON.stringify({
                     name: name,
-                    contact: mailOrPhone,
+                    email: mail,
                     subject: sub,
                     message: msg
                 })
@@ -45,18 +45,14 @@ export default function ContactMe() {
                     <CardContent>
                         <form className="space-y-4">
                             <Input type="text" placeholder="Name" className="bg-white" value={name} onChange={(e) => setName(e.target.value)} required />
-                            <Input type="email" placeholder="Email/Phone" className="bg-white" value={mailOrPhone} onChange={(e) => setMailOrPhone(e.target.value)} required />
+                            <Input type="email" placeholder="Email" className="bg-white" value={mail} onChange={(e) => setMail(e.target.value)} required />
                             <Input type="text" placeholder="Subject" className="bg-white" value={sub} onChange={(e) => setSub(e.target.value)} required />
                             <Textarea placeholder="Message" rows={5} className="w-full resize-none bg-white p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" value={msg} onChange={(e) => setMsg(e.target.value)} />
                             <Button className="w-[50%] ml-[25%] bg-black text-lg hover:bg-gray-700 text-white" onClick={(e) => { handleClick(e) }}><FaRegPaperPlane className="w-[50px] text-2xl" />Send Me</Button>
                         </form>
                     </CardContent>
                     <Heading level={2}>OR</Heading>
-                    <div className="grid grid-cols-2 gap-2 justify-around items-center text-xl text-white text-2xl">
-                        <a href="mailto:modhahrutav@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-black m-6 py-1 h-[40%] w-[70%] items-center flex justify-around shadow-xl rounded-lg m-6 p-2">
-                            <FaEnvelope className="ml-5 text-3xl" />
-                            Mail
-                        </a>
+                    <div className="grid grid-cols-3 gap-2 justify-around items-center text-xl text-white text-2xl">
                         <a href="tel:+919427452050" className="bg-black h-[40%] w-[70%] m-6 p-2 items-center flex justify-around shadow-xl rounded-lg">
                             <FaPhone className="ml-5 text-3xl" />
                             Call
