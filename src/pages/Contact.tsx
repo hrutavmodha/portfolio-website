@@ -12,17 +12,17 @@ export default function ContactMe() {
     const [msg, setMsg] = useState<string>('')
     const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        if(!name || !mailOrPhone || !sub || !msg)
+        if (!name || !mailOrPhone || !sub || !msg)
             alert('Please fill up all the details')
         else {
-            fetch(`${import.meta.env.VITE_BACKEND_URL}contact`, {
+            fetch(`${import.meta.env.VITE_BACKEND_URL}/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
                     name: name,
-                    contact: mailOrPhone, 
+                    contact: mailOrPhone,
                     subject: sub,
                     message: msg
                 })
@@ -47,8 +47,8 @@ export default function ContactMe() {
                             <Input type="text" placeholder="Name" className="bg-white" value={name} onChange={(e) => setName(e.target.value)} required />
                             <Input type="email" placeholder="Email/Phone" className="bg-white" value={mailOrPhone} onChange={(e) => setMailOrPhone(e.target.value)} required />
                             <Input type="text" placeholder="Subject" className="bg-white" value={sub} onChange={(e) => setSub(e.target.value)} required />
-                            <Textarea placeholder="Message" rows={5} className="w-full resize-none bg-white p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" value={msg} onChange={(e) => setMsg(e.target.value)}/>
-                            <Button className="w-[50%] ml-[25%] bg-black text-lg hover:bg-gray-700 text-white" onClick={ (e) => {handleClick(e)}}><FaRegPaperPlane className="w-[50px] text-2xl" />Send Me</Button>
+                            <Textarea placeholder="Message" rows={5} className="w-full resize-none bg-white p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" value={msg} onChange={(e) => setMsg(e.target.value)} />
+                            <Button className="w-[50%] ml-[25%] bg-black text-lg hover:bg-gray-700 text-white" onClick={(e) => { handleClick(e) }}><FaRegPaperPlane className="w-[50px] text-2xl" />Send Me</Button>
                         </form>
                     </CardContent>
                     <Heading level={2}>OR</Heading>
