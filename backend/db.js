@@ -1,6 +1,10 @@
+require('dotenv').config()
 const mongo = require('mongoose')
-const connect = (db) => {
-    const req = mongo.connect(`mongodb://localhost:27017/${db}`)
+const connect = () => {
+    const req = mongo.connect(process.env.MONGO_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
     req.then(() => {
         console.log('Connected to MongoDB successfully')
     })

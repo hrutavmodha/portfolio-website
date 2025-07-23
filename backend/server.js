@@ -9,7 +9,7 @@ app.use(cors({
     methods: ['POST', 'GET']
 }))
 app.use(express.json())
-connect('portfolio')
+connect()
 app.post('/contact', (req, res) => {
     contact(req, res)
 })
