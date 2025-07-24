@@ -9,7 +9,7 @@ export default function About() {
             <div className='flex flex-col sm:flex-row sm:justify-around items-center gap-6'>
                 <img
                     src='https://raw.githubusercontent.com/hrutavmodha/portfolio-website/main/images/ghpp.jpg'
-                    className='w-32 h-32 sm:w-48 sm:h-48 object-cover rounded-full border-2 border-primary shadow-2xl flex-shrink-0'
+                    className='w-30 h-30 sm:w-30 sm:h-30 object-cover rounded-full border-2 border-primary shadow-2xl mx-auto md:mx-0'
                     alt='MyProfile'
                 />
                 <Separator className='hidden sm:block mt-6 ml-6' />

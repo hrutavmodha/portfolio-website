@@ -11,4 +11,6 @@ app.use(express.json())
 app.post('/contact', (req, res) => {
     contact(req, res)
 })
-module.exports = app
+app.listen(process.env.PORT, process.env.HOST, () => {
+    console.log(`Server is running at http://${process.env.HOST}:${process.env.PORT}`)
+})

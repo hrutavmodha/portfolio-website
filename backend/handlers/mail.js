@@ -16,8 +16,7 @@ module.exports = async function mailMe(reqBody) {
         html: `
             <div style="font-family: Roboto, sans-serif; line-height: 1.6;">
                 <h1 align="center">${subject}</h1>
-                <b>This is a message from your portfolio website contact form, filled out by ${name} (${email}):</b>
-                <p>${message}</p>
+                <p>Hi, Hrutav Modha. My name is ${name}!<br/><br/>${message}</p>
             </div>
         `
     }
