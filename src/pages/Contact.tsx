@@ -72,7 +72,7 @@ export default function ContactMe() {
                         </form>
                     </CardContent>
                     <Heading level={2}>OR</Heading>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center items-center text-xl text-white px-8 py-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center items-center text-xl text-white px-8 py-4 mb-5">
                         <a href="tel:+919427452050" className="bg-black w-full md:w-[80%] p-3 items-center flex justify-center gap-2 shadow-xl rounded-lg hover:bg-gray-800 transition-colors">
                             <FaPhone className="text-2xl" />
                             Call
